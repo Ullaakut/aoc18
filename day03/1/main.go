@@ -92,7 +92,7 @@ func computeOverlap(claims []claim) uint {
 		}
 	}
 
-	// Computer overlap
+	// Compute overlap
 	var overlap uint
 	for _, IDs := range surfaceClaimed {
 		if len(IDs) > 1 {
