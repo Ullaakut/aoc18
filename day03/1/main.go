@@ -13,12 +13,17 @@ const inputFilePath = "input.txt"
 
 var claimFormat = regexp.MustCompile(`^#([0-9]+) @ ([0-9]+),([0-9]+): ([0-9]+)x([0-9]+)$`)
 
+type position struct {
+	x uint64
+	y uint64
+}
+
 type claim struct {
 	ID     string
-	x      uint64
-	y      uint64
 	width  uint64
 	height uint64
+	x      uint64
+	y      uint64
 }
 
 func parseClaims() []claim {
@@ -33,7 +38,6 @@ func parseClaims() []claim {
 	for _, line := range lines {
 		matches := claimFormat.FindAllStringSubmatch(string(line), -1)
 		if matches == nil {
-			fmt.Printf("No match: Issue with line %q\n", line)
 			continue
 		}
 
@@ -76,13 +80,35 @@ func parseClaims() []claim {
 	return claims
 }
 
+func computeOverlap(claims []claim) uint {
+	surfaceClaimed := make(map[position][]string)
+
+	// Compute surface claimed
+	for _, claim := range claims {
+		for x := claim.x; x < claim.x+claim.width; x++ {
+			for y := claim.y; y < claim.y+claim.height; y++ {
+				surfaceClaimed[position{x: x, y: y}] = append(surfaceClaimed[position{x: x, y: y}], claim.ID)
+			}
+		}
+	}
+
+	// Computer overlap
+	var overlap uint
+	for _, IDs := range surfaceClaimed {
+		if len(IDs) > 1 {
+			overlap++
+		}
+	}
+
+	return overlap
+}
+
 func main() {
 	log.Println("Beginning day03ex01...")
 
 	claims := parseClaims()
-
-	fmt.Printf("%+v\n", claims)
+	overlap := computeOverlap(claims)
 
 	log.Println("Overlapping claims successfully computed")
-	log.Printf("Inches covered by overlapping claims: %d\n", 0)
+	log.Printf("Inches covered by overlapping claims: %d\n", overlap)
 }
