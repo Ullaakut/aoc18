@@ -34,7 +34,7 @@ Day | Completed | Project | Challenge | Language
 ----|--------------|---------|-------|---------
 01 | :white_check_mark: | [day01](day01) | [Advent of Code 2018 - Day 1](https://adventofcode.com/2018/day/1) | Go
 02 | :white_check_mark: | [day02](day02) | [Advent of Code 2018 - Day 2](https://adventofcode.com/2018/day/2) | Go
-03 | | | |
+03 | In progress | [day03](day03) | [Advent of Code 2018 - Day 3](https://adventofcode.com/2018/day/3) | Go
 04 | | | |
 05 | | | |
 06 | | | |
