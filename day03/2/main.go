@@ -119,7 +119,7 @@ func computeUniqueClaim(claims []claim) string {
 }
 
 func main() {
-	log.Println("Beginning day03ex01...")
+	log.Println("Beginning day03ex02...")
 
 	claims := parseClaims()
 	uniqueClaim := computeUniqueClaim(claims)
