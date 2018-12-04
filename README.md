@@ -50,12 +50,14 @@ Day | Completed | Project | Challenge | Language | Tests
 
 <p align="center">
     <img src="img/0201.png">
+    <img src="img/0201_test.png">
 </p>
 
 ### Challenge 2
 
 <p align="center">
     <img src="img/0202.png">
+    <img src="img/0202_test.png">
 </p>
 
 ## Day 3
