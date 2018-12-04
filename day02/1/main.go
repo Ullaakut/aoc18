@@ -26,10 +26,8 @@ func inspectBoxID(boxID []byte) (double bool, triple bool) {
 	return
 }
 
-func main() {
-	log.Println("Beginning day02ex01...")
-
-	inputFile, err := os.Open(inputFilePath)
+func solveExercise(inputPath string) (int, int) {
+	inputFile, err := os.Open(inputPath)
 	if err != nil {
 		log.Fatal(fmt.Sprint("Unable to open input file:", err))
 	}
@@ -48,6 +46,14 @@ func main() {
 			triples++
 		}
 	}
+
+	return doubles, triples
+}
+
+func main() {
+	log.Println("Beginning day02ex01...")
+
+	triples, doubles := solveExercise(inputFilePath)
 
 	log.Println("Box IDs checksum successfully computed")
 	log.Printf("Checksum: %d\n", triples*doubles)

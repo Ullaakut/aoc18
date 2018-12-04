@@ -33,10 +33,8 @@ func similarBoxIDs(boxID1, boxID2 []byte) (bool, []byte) {
 	return differences < 2, commonLetters
 }
 
-func main() {
-	log.Println("Beginning day02ex02...")
-
-	inputFile, err := os.Open(inputFilePath)
+func solveExercise(inputPath string) []byte {
+	inputFile, err := os.Open(inputPath)
 	if err != nil {
 		log.Fatal(fmt.Sprint("Unable to open input file:", err))
 	}
@@ -58,9 +56,16 @@ func main() {
 			if similarBoxIDs {
 				log.Println("Similar BoxIDs found")
 				log.Printf("BoxIDs: %s - %s\n", boxID1, boxID2)
-				log.Printf("Common letters: %s\n", commonLetters)
-				return
+				return commonLetters
 			}
 		}
 	}
+
+	return nil
+}
+
+func main() {
+	log.Println("Beginning day02ex02...")
+
+	log.Printf("Common letters: %s\n", solveExercise(inputFilePath))
 }
