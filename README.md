@@ -7,7 +7,7 @@ Day | Completed | Project | Challenge | Language
 01 | :white_check_mark: | [day01](day01) | [Advent of Code 2018 - Day 1](https://adventofcode.com/2018/day/1) | Go
 02 | :white_check_mark: | [day02](day02) | [Advent of Code 2018 - Day 2](https://adventofcode.com/2018/day/2) | Go
 03 | :white_check_mark: | [day03](day03) | [Advent of Code 2018 - Day 3](https://adventofcode.com/2018/day/3) | Go
-04 | :soon: | [day04](day04) | [Advent of Code 2018 - Day 4](https://adventofcode.com/2018/day/4) | Go
+04 | :white_check_mark: | [day04](day04) | [Advent of Code 2018 - Day 4](https://adventofcode.com/2018/day/4) | Go
 05 | :soon: | [day05](day05) | [Advent of Code 2018 - Day 5](https://adventofcode.com/2018/day/5) | Go
 06 | :soon: | [day06](day06) | [Advent of Code 2018 - Day 6](https://adventofcode.com/2018/day/6) | Go
 07 | :soon: | [day07](day07) | [Advent of Code 2018 - Day 7](https://adventofcode.com/2018/day/7) | Go
@@ -72,19 +72,23 @@ Day | Completed | Project | Challenge | Language
     <img src="img/0302.png">
 </p>
 
-<!-- ## Day 4
+## Day 4
+
+On this day, I added automated tests to ensure that my algorithm had similar results to those expected in the challenge description before submitting my answer.
 
 ### Challenge 1
 
 <p align="center">
     <img src="img/0401.png">
+    <img src="img/0401_test.png">
 </p>
 
 ### Challenge 2
 
 <p align="center">
     <img src="img/0402.png">
-</p> -->
+    <img src="img/0402_test.png">
+</p>
 
 <!-- ## Day 5
 
