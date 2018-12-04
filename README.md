@@ -2,33 +2,33 @@
 
 ## Recap
 
-Day | Completed | Project | Challenge | Language
-----|--------------|---------|-------|---------
-01 | :white_check_mark: | [day01](day01) | [Advent of Code 2018 - Day 1](https://adventofcode.com/2018/day/1) | Go
-02 | :white_check_mark: | [day02](day02) | [Advent of Code 2018 - Day 2](https://adventofcode.com/2018/day/2) | Go
-03 | :white_check_mark: | [day03](day03) | [Advent of Code 2018 - Day 3](https://adventofcode.com/2018/day/3) | Go
-04 | :white_check_mark: | [day04](day04) | [Advent of Code 2018 - Day 4](https://adventofcode.com/2018/day/4) | Go
-05 | :soon: | [day05](day05) | [Advent of Code 2018 - Day 5](https://adventofcode.com/2018/day/5) | Go
-06 | :soon: | [day06](day06) | [Advent of Code 2018 - Day 6](https://adventofcode.com/2018/day/6) | Go
-07 | :soon: | [day07](day07) | [Advent of Code 2018 - Day 7](https://adventofcode.com/2018/day/7) | Go
-08 | :soon: | [day08](day08) | [Advent of Code 2018 - Day 8](https://adventofcode.com/2018/day/8) | Go
-09 | :soon: | [day09](day09) | [Advent of Code 2018 - Day 9](https://adventofcode.com/2018/day/9) | Go
-10 | :soon: | [day10](day10) | [Advent of Code 2018 - Day 10](https://adventofcode.com/2018/day/10) | Go
-11 | :soon: | [day11](day11) | [Advent of Code 2018 - Day 11](https://adventofcode.com/2018/day/11) | Go
-12 | :soon: | [day12](day12) | [Advent of Code 2018 - Day 12](https://adventofcode.com/2018/day/12) | Go
-13 | :soon: | [day13](day13) | [Advent of Code 2018 - Day 13](https://adventofcode.com/2018/day/13) | Go
-14 | :soon: | [day14](day14) | [Advent of Code 2018 - Day 14](https://adventofcode.com/2018/day/14) | Go
-15 | :soon: | [day15](day15) | [Advent of Code 2018 - Day 15](https://adventofcode.com/2018/day/15) | Go
-16 | :soon: | [day16](day16) | [Advent of Code 2018 - Day 16](https://adventofcode.com/2018/day/16) | Go
-17 | :soon: | [day17](day17) | [Advent of Code 2018 - Day 17](https://adventofcode.com/2018/day/17) | Go
-18 | :soon: | [day18](day18) | [Advent of Code 2018 - Day 18](https://adventofcode.com/2018/day/18) | Go
-19 | :soon: | [day19](day19) | [Advent of Code 2018 - Day 19](https://adventofcode.com/2018/day/19) | Go
-20 | :soon: | [day20](day20) | [Advent of Code 2018 - Day 20](https://adventofcode.com/2018/day/20) | Go
-21 | :soon: | [day21](day21) | [Advent of Code 2018 - Day 21](https://adventofcode.com/2018/day/21) | Go
-22 | :soon: | [day22](day22) | [Advent of Code 2018 - Day 22](https://adventofcode.com/2018/day/22) | Go
-23 | :soon: | [day23](day23) | [Advent of Code 2018 - Day 23](https://adventofcode.com/2018/day/23) | Go
-24 | :soon: | [day24](day24) | [Advent of Code 2018 - Day 24](https://adventofcode.com/2018/day/24) | Go
-25 | :soon: | [day25](day25) | [Advent of Code 2018 - Day 25](https://adventofcode.com/2018/day/25) | Go
+Day | Completed | Project | Challenge | Language | Tests
+----|--------------|---------|-------|---------|------
+01 | :white_check_mark: | [day01](day01) | [Advent of Code 2018 - Day 1](https://adventofcode.com/2018/day/1) | Go | :soon:
+02 | :white_check_mark: | [day02](day02) | [Advent of Code 2018 - Day 2](https://adventofcode.com/2018/day/2) | Go | :soon:
+03 | :white_check_mark: | [day03](day03) | [Advent of Code 2018 - Day 3](https://adventofcode.com/2018/day/3) | Go | :white_check_mark:
+04 | :white_check_mark: | [day04](day04) | [Advent of Code 2018 - Day 4](https://adventofcode.com/2018/day/4) | Go | :white_check_mark:
+05 | :soon: | [day05](day05) | [Advent of Code 2018 - Day 5](https://adventofcode.com/2018/day/5) | Go | :soon:
+06 | :soon: | [day06](day06) | [Advent of Code 2018 - Day 6](https://adventofcode.com/2018/day/6) | Go | :soon:
+07 | :soon: | [day07](day07) | [Advent of Code 2018 - Day 7](https://adventofcode.com/2018/day/7) | Go | :soon:
+08 | :soon: | [day08](day08) | [Advent of Code 2018 - Day 8](https://adventofcode.com/2018/day/8) | Go | :soon:
+09 | :soon: | [day09](day09) | [Advent of Code 2018 - Day 9](https://adventofcode.com/2018/day/9) | Go | :soon:
+10 | :soon: | [day10](day10) | [Advent of Code 2018 - Day 10](https://adventofcode.com/2018/day/10) | Go | :soon:
+11 | :soon: | [day11](day11) | [Advent of Code 2018 - Day 11](https://adventofcode.com/2018/day/11) | Go | :soon:
+12 | :soon: | [day12](day12) | [Advent of Code 2018 - Day 12](https://adventofcode.com/2018/day/12) | Go | :soon:
+13 | :soon: | [day13](day13) | [Advent of Code 2018 - Day 13](https://adventofcode.com/2018/day/13) | Go | :soon:
+14 | :soon: | [day14](day14) | [Advent of Code 2018 - Day 14](https://adventofcode.com/2018/day/14) | Go | :soon:
+15 | :soon: | [day15](day15) | [Advent of Code 2018 - Day 15](https://adventofcode.com/2018/day/15) | Go | :soon:
+16 | :soon: | [day16](day16) | [Advent of Code 2018 - Day 16](https://adventofcode.com/2018/day/16) | Go | :soon:
+17 | :soon: | [day17](day17) | [Advent of Code 2018 - Day 17](https://adventofcode.com/2018/day/17) | Go | :soon:
+18 | :soon: | [day18](day18) | [Advent of Code 2018 - Day 18](https://adventofcode.com/2018/day/18) | Go | :soon:
+19 | :soon: | [day19](day19) | [Advent of Code 2018 - Day 19](https://adventofcode.com/2018/day/19) | Go | :soon:
+20 | :soon: | [day20](day20) | [Advent of Code 2018 - Day 20](https://adventofcode.com/2018/day/20) | Go | :soon:
+21 | :soon: | [day21](day21) | [Advent of Code 2018 - Day 21](https://adventofcode.com/2018/day/21) | Go | :soon:
+22 | :soon: | [day22](day22) | [Advent of Code 2018 - Day 22](https://adventofcode.com/2018/day/22) | Go | :soon:
+23 | :soon: | [day23](day23) | [Advent of Code 2018 - Day 23](https://adventofcode.com/2018/day/23) | Go | :soon:
+24 | :soon: | [day24](day24) | [Advent of Code 2018 - Day 24](https://adventofcode.com/2018/day/24) | Go | :soon:
+25 | :soon: | [day25](day25) | [Advent of Code 2018 - Day 25](https://adventofcode.com/2018/day/25) | Go | :soon:
 
 ## Day 1
 
@@ -64,12 +64,14 @@ Day | Completed | Project | Challenge | Language
 
 <p align="center">
     <img src="img/0301.png">
+    <img src="img/0301_test.png">
 </p>
 
 ### Challenge 2
 
 <p align="center">
     <img src="img/0302.png">
+    <img src="img/0302_test.png">
 </p>
 
 ## Day 4
