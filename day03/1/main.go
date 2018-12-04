@@ -26,8 +26,8 @@ type claim struct {
 	y      uint64
 }
 
-func parseClaims() []claim {
-	content, err := ioutil.ReadFile(inputFilePath)
+func parseClaims(inputPath string) []claim {
+	content, err := ioutil.ReadFile(inputPath)
 	if err != nil {
 		log.Fatal(fmt.Sprint("Unable to open input file:", err))
 	}
@@ -103,11 +103,16 @@ func computeOverlap(claims []claim) uint {
 	return overlap
 }
 
+func solveExercise(inputPath string) uint {
+	claims := parseClaims(inputPath)
+
+	return computeOverlap(claims)
+}
+
 func main() {
 	log.Println("Beginning day03ex01...")
 
-	claims := parseClaims()
-	overlap := computeOverlap(claims)
+	overlap := solveExercise(inputFilePath)
 
 	log.Println("Overlapping claims successfully computed")
 	log.Printf("Inches covered by overlapping claims: %d\n", overlap)
