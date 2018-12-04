@@ -5,7 +5,7 @@
 Day | Completed | Project | Challenge | Language | Tests
 ----|--------------|---------|-------|---------|------
 01 | :white_check_mark: | [day01](day01) | [Advent of Code 2018 - Day 1](https://adventofcode.com/2018/day/1) | Go | :soon:
-02 | :white_check_mark: | [day02](day02) | [Advent of Code 2018 - Day 2](https://adventofcode.com/2018/day/2) | Go | :soon:
+02 | :white_check_mark: | [day02](day02) | [Advent of Code 2018 - Day 2](https://adventofcode.com/2018/day/2) | Go | :white_check_mark:
 03 | :white_check_mark: | [day03](day03) | [Advent of Code 2018 - Day 3](https://adventofcode.com/2018/day/3) | Go | :white_check_mark:
 04 | :white_check_mark: | [day04](day04) | [Advent of Code 2018 - Day 4](https://adventofcode.com/2018/day/4) | Go | :white_check_mark:
 05 | :soon: | [day05](day05) | [Advent of Code 2018 - Day 5](https://adventofcode.com/2018/day/5) | Go | :soon:
