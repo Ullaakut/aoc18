@@ -23,7 +23,6 @@ func computePolymerReduction(content []byte) []byte {
 				// uppercase equivalent, they react
 				if 65 <= unit && unit <= 90 && neighbor-unit == 32 {
 					content = append(content[:idx], content[idx+2:]...)
-					log.Printf("Reaction between %s and %s", []byte{unit}, []byte{neighbor})
 					break
 				}
 
@@ -31,7 +30,6 @@ func computePolymerReduction(content []byte) []byte {
 				// lowercase equivalent, they react
 				if 97 <= unit && unit <= 122 && unit-neighbor == 32 {
 					content = append(content[:idx], content[idx+2:]...)
-					log.Printf("Reaction between %s and %s", []byte{unit}, []byte{neighbor})
 					break
 				}
 			} else {
