@@ -44,7 +44,7 @@ func computePolymerReduction(content []byte) []byte {
 }
 
 func solveExercise(inputPath string) []byte {
-	contents, err := ioutil.ReadFile(inputFilePath)
+	contents, err := ioutil.ReadFile(inputPath)
 	if err != nil {
 		log.Fatal(fmt.Sprint("Unable to read input file:", err))
 	}
