@@ -8,7 +8,7 @@ Day | Completed | Project | Challenge | Language | Tests
 02 | :white_check_mark: | [day02](day02) | [Advent of Code 2018 - Day 2](https://adventofcode.com/2018/day/2) | Go | :white_check_mark:
 03 | :white_check_mark: | [day03](day03) | [Advent of Code 2018 - Day 3](https://adventofcode.com/2018/day/3) | Go | :white_check_mark:
 04 | :white_check_mark: | [day04](day04) | [Advent of Code 2018 - Day 4](https://adventofcode.com/2018/day/4) | Go | :white_check_mark:
-05 | :soon: | [day05](day05) | [Advent of Code 2018 - Day 5](https://adventofcode.com/2018/day/5) | Go | :soon:
+05 | :white_check_mark: | [day05](day05) | [Advent of Code 2018 - Day 5](https://adventofcode.com/2018/day/5) | Go | :white_check_mark:
 06 | :soon: | [day06](day06) | [Advent of Code 2018 - Day 6](https://adventofcode.com/2018/day/6) | Go | :soon:
 07 | :soon: | [day07](day07) | [Advent of Code 2018 - Day 7](https://adventofcode.com/2018/day/7) | Go | :soon:
 08 | :soon: | [day08](day08) | [Advent of Code 2018 - Day 8](https://adventofcode.com/2018/day/8) | Go | :soon:
@@ -78,8 +78,6 @@ Day | Completed | Project | Challenge | Language | Tests
 
 ## Day 4
 
-On this day, I added automated tests to ensure that my algorithm had similar results to those expected in the challenge description before submitting my answer.
-
 ### Challenge 1
 
 <p align="center">
@@ -94,21 +92,25 @@ On this day, I added automated tests to ensure that my algorithm had similar res
     <img src="img/0402_test.png">
 </p>
 
-<!-- ## Day 5
+## Day 5
 
 ### Challenge 1
 
 <p align="center">
     <img src="img/0501.png">
+    <img src="img/0501_test.png">
 </p>
 
 ### Challenge 2
 
+This challenge is the first one to take more than 1000ms to produce a result. I will probably try to find ways to improve its performance later on
+
 <p align="center">
     <img src="img/0502.png">
+    <img src="img/0502_test.png">
 </p>
 
--->
+
 <!-- ## Day 6
 
 ### Challenge 1
