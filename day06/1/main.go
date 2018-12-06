@@ -76,8 +76,6 @@ func computeAreasFromCoordinates(coordinates []coord) areas {
 					closestCoord = coordinate
 					previousClosestDistance = closestDistance
 					closestDistance = distance
-
-					// log.Printf("Found new closest coordinate at %d,%d close to %d,%d with distance %d", point.x, point.y, coordinate.x, coordinate.y, distance)
 				}
 			}
 
@@ -155,7 +153,6 @@ func solveExercise(inputPath string) int {
 		}
 	}
 
-	// Remove 1 from the length, for the point with distance = 0
 	return biggestArea
 }
 
