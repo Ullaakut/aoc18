@@ -33,12 +33,13 @@ func computeSafeRegionFromCoordinates(coordinates []coord, safeLimit int) []coor
 	safeZone := []coord{}
 	points := []coord{}
 
-	for x := -20; x <= 20; x++ {
-		for y := -20; y <= 20; y++ {
+	for x := -1000; x <= 1000; x++ {
+		for y := -1000; y <= 1000; y++ {
 			point := coord{x: x, y: y}
 
 			for _, coordinate := range coordinates {
-				point.safeness += calcDistance(point, coordinate)
+				distance := calcDistance(point, coordinate)
+				point.safeness += distance
 			}
 
 			points = append(points, point)
