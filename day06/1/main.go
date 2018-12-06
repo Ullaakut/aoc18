@@ -32,8 +32,8 @@ func computeAreasFromCoordinates(coordinates []coord) areas {
 	areas2 := make(areas)
 
 	// Run with low boundaries
-	for x := -20; x <= 20; x++ {
-		for y := -20; y <= 20; y++ {
+	for x := -1000; x <= 1000; x++ {
+		for y := -1000; y <= 1000; y++ {
 			point := coord{x: x, y: y}
 
 			var closestCoord coord
@@ -61,8 +61,8 @@ func computeAreasFromCoordinates(coordinates []coord) areas {
 	}
 
 	// Run with high boundaries
-	for x := -40; x <= 40; x++ {
-		for y := -40; y <= 40; y++ {
+	for x := -1100; x <= 1100; x++ {
+		for y := -1100; y <= 1100; y++ {
 			point := coord{x: x, y: y}
 
 			var closestCoord coord
