@@ -96,11 +96,9 @@ func computeAreasFromCoordinates(coordinates []coord) areas {
 	// it means that the area is infinite.
 	for coord, area := range areas1 {
 		// If it changed after changing the bounds, then it's infinite and we ignore it
-		if len(areas2[coord]) != len(area) {
-			log.Printf("Ignoring infinite area for %v: was %d became %d", coord, len(area), len(areas2[coord]))
-		} else {
+		// Otherwise, we add it
+		if len(areas2[coord]) == len(area) {
 			areas3[coord] = area
-			log.Printf("Found finite area for %v of size %d", coord, len(area))
 		}
 	}
 
@@ -130,9 +128,7 @@ func computeAreas(coordinateLines [][]byte) areas {
 		coordinates = append(coordinates, coord{x: int(x), y: int(y)})
 	}
 
-	areas := computeAreasFromCoordinates(coordinates)
-
-	return areas
+	return computeAreasFromCoordinates(coordinates)
 }
 
 func solveExercise(inputPath string) int {
