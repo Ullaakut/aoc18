@@ -29,6 +29,9 @@ func computeInstructionsOrder(originalInstructions instructions) []byte {
 	for {
 		notNext := []byte{}
 
+		log.Printf("Remaining instructions: %d", len(instr))
+		log.Printf("Original instructions: %d", len(originalInstructions))
+
 		if len(instr) == 1 {
 			for id, prev := range instr {
 				log.Printf("Next instruction should be %q", id)
@@ -122,13 +125,20 @@ func computeWorkTime(instructions instructions, order []byte, stepTime, numWorke
 	done := []byte{}
 	inProgress := []byte{}
 	workers := []worker{}
+	header := "Second\t"
+	formatString := "%d\t"
 
 	for i := 0; i < numWorkers; i++ {
 		workers = append(workers, worker{})
+		formatString += "%q\t"
+		header += fmt.Sprintf("Worker %d\t", i+1)
 	}
 
-	w := tabwriter.NewWriter(os.Stdout, 0, 0, 3, ' ', 0)
-	fmt.Fprintln(w, "Second\tWorker 1\tWorker 2\tDone")
+	formatString += "%s\n"
+	header += "Done\n"
+
+	w := tabwriter.NewWriter(os.Stdout, 10, 10, 10, ' ', 0)
+	fmt.Fprintln(w, header)
 	for {
 
 		for id := range workers {
@@ -168,11 +178,17 @@ func computeWorkTime(instructions instructions, order []byte, stepTime, numWorke
 			}
 		}
 
-		fmt.Fprintf(w, "%d\t%q\t%q\t%s\n", totalTime, workers[0].getTask(), workers[1].getTask(), done)
+		table := []interface{}{totalTime}
+		for _, worker := range workers {
+			table = append(table, worker.getTask())
+		}
+		table = append(table, done)
+
+		fmt.Fprintf(w, formatString, table...)
 		w.Flush()
 
 		if len(done) == len(order) {
-			return totalTime
+			return totalTime - 1
 		}
 
 		totalTime++
