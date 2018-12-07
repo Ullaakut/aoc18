@@ -23,15 +23,11 @@ func computeInstructionsOrder(instructions instructions) string {
 
 		if len(instructions) == 1 {
 			for id, prev := range instructions {
-				log.Printf("Next instruction should be %q", id)
 				sort.Slice(prev, func(i, j int) bool {
 					return prev[i] < prev[j]
 				})
 				res := append(done, id)
 
-				for _, p := range prev {
-					log.Printf("Next instruction should be %q", p)
-				}
 				res = append(res, prev...)
 
 				return string(res)
@@ -55,7 +51,6 @@ func computeInstructionsOrder(instructions instructions) string {
 			return potentialNext[i] < potentialNext[j]
 		})
 
-		log.Printf("Next instruction should be %q", potentialNext[0])
 		done = append(done, potentialNext[0])
 		delete(instructions, potentialNext[0])
 	}
