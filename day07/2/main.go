@@ -132,6 +132,7 @@ func computeWorkTime(instructions instructions, order []byte, stepTime, numWorke
 
 	w := tabwriter.NewWriter(os.Stdout, 10, 0, 3, ' ', 0)
 	fmt.Fprintln(w, header)
+
 	for {
 		for id := range workers {
 			if workers[id].working {
@@ -216,8 +217,5 @@ func solveExercise(filePath string, stepTime, workers int) int {
 func main() {
 	log.Println("Beginning day07ex02...")
 
-	workTime := solveExercise(inputFilePath, 60, 5)
-
-	log.Println("Work time successfully computed")
-	log.Printf("Work time: %d\n", workTime)
+	solveExercise(inputFilePath, 60, 5)
 }
