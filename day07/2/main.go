@@ -29,20 +29,12 @@ func computeInstructionsOrder(originalInstructions instructions) []byte {
 	for {
 		notNext := []byte{}
 
-		log.Printf("Remaining instructions: %d", len(instr))
-		log.Printf("Original instructions: %d", len(originalInstructions))
-
 		if len(instr) == 1 {
 			for id, prev := range instr {
-				log.Printf("Next instruction should be %q", id)
 				sort.Slice(prev, func(i, j int) bool {
 					return prev[i] < prev[j]
 				})
 				res := append(done, id)
-
-				for _, p := range prev {
-					log.Printf("Next instruction should be %q", p)
-				}
 				res = append(res, prev...)
 
 				return res
@@ -66,7 +58,6 @@ func computeInstructionsOrder(originalInstructions instructions) []byte {
 			return potentialNext[i] < potentialNext[j]
 		})
 
-		log.Printf("Next instruction should be %q", potentialNext[0])
 		done = append(done, potentialNext[0])
 		delete(instr, potentialNext[0])
 	}
