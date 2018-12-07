@@ -73,7 +73,9 @@ func (w *worker) getTask() byte {
 	if w.working {
 		return w.task
 	}
-	return 0
+
+	// the ascii equivalent of a dot
+	return 46
 }
 
 // Checks if a task is available for the taking
@@ -121,7 +123,7 @@ func computeWorkTime(instructions instructions, order []byte, stepTime, numWorke
 
 	for i := 0; i < numWorkers; i++ {
 		workers = append(workers, worker{})
-		formatString += "%q\t"
+		formatString += "%c\t"
 		header += fmt.Sprintf("Worker %d\t", i+1)
 	}
 
@@ -131,7 +133,6 @@ func computeWorkTime(instructions instructions, order []byte, stepTime, numWorke
 	w := tabwriter.NewWriter(os.Stdout, 10, 0, 3, ' ', 0)
 	fmt.Fprintln(w, header)
 	for {
-
 		for id := range workers {
 			if workers[id].working {
 				workers[id].timeLeft--
