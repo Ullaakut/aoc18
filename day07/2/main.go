@@ -137,7 +137,7 @@ func computeWorkTime(instructions instructions, order []byte, stepTime, numWorke
 	formatString += "%s\n"
 	header += "Done\n"
 
-	w := tabwriter.NewWriter(os.Stdout, 10, 10, 10, ' ', 0)
+	w := tabwriter.NewWriter(os.Stdout, 10, 0, 3, ' ', 0)
 	fmt.Fprintln(w, header)
 	for {
 
@@ -188,7 +188,7 @@ func computeWorkTime(instructions instructions, order []byte, stepTime, numWorke
 		w.Flush()
 
 		if len(done) == len(order) {
-			return totalTime - 1
+			return totalTime
 		}
 
 		totalTime++
