@@ -143,21 +143,23 @@ This challenge is the first one to take more than 1000ms to produce a result. I 
     <img src="img/0702_test.png">
 </p>
 
-<!-- ## Day 8
+## Day 8
 
 ### Challenge 1
 
 <p align="center">
     <img src="img/0801.png">
+    <img src="img/0801_test.png">
 </p>
 
 ### Challenge 2
 
 <p align="center">
     <img src="img/0802.png">
+    <img src="img/0802_test.png">
 </p>
 
--->
+
 <!-- ## Day 9
 
 ### Challenge 1
