@@ -42,7 +42,6 @@ func computeNode(meta []int) (int, []int) {
 		node.total += val
 	}
 
-	log.Printf("Computed node with %d total metadata", node.total)
 	return node.total, node.meta[node.nMetadata:]
 }
 
