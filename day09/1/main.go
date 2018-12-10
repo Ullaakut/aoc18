@@ -13,7 +13,6 @@ type playerMap map[int]int
 const inputFilePath = "input.txt"
 
 func solveExercise(nPlayers, lastMarbleScore int) int {
-	log.Printf("Received data from %d players; last marble is worth %d points", nPlayers, lastMarbleScore)
 	playerIdx := 1
 
 	players := make(playerMap)

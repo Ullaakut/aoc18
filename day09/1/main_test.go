@@ -80,7 +80,7 @@ func TestSolveExercise(t *testing.T) {
 	}
 
 	for _, test := range testCases {
-		t.Run(fmt.Sprintf("%d players; last marble is worth %d points: high score is %d", test.players, test.lastMarbleScore, test.expectedHighScore), func(t *testing.T) {
+		t.Run(fmt.Sprintf("%d/%d/%d", test.players, test.lastMarbleScore, test.expectedHighScore), func(t *testing.T) {
 			highScore := solveExercise(test.players, test.lastMarbleScore)
 
 			if highScore != test.expectedHighScore {
