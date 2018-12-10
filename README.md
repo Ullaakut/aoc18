@@ -12,7 +12,7 @@ Day | Completed | Project | Challenge | Language | Tests
 06 | :white_check_mark: | [day06](day06) | [Advent of Code 2018 - Day 6](https://adventofcode.com/2018/day/6) | Go | :white_check_mark:
 07 | :white_check_mark: | [day07](day07) | [Advent of Code 2018 - Day 7](https://adventofcode.com/2018/day/7) | Go | :white_check_mark:
 08 | :white_check_mark: | [day08](day08) | [Advent of Code 2018 - Day 8](https://adventofcode.com/2018/day/8) | Go | :white_check_mark:
-09 | :soon: | [day09](day09) | [Advent of Code 2018 - Day 9](https://adventofcode.com/2018/day/9) | Go | :soon:
+09 | :white_check_mark: | [day09](day09) | [Advent of Code 2018 - Day 9](https://adventofcode.com/2018/day/9) | Go | :white_check_mark:
 10 | :soon: | [day10](day10) | [Advent of Code 2018 - Day 10](https://adventofcode.com/2018/day/10) | Go | :soon:
 11 | :soon: | [day11](day11) | [Advent of Code 2018 - Day 11](https://adventofcode.com/2018/day/11) | Go | :soon:
 12 | :soon: | [day12](day12) | [Advent of Code 2018 - Day 12](https://adventofcode.com/2018/day/12) | Go | :soon:
@@ -159,22 +159,14 @@ This challenge is the first one to take more than 1000ms to produce a result. I 
     <img src="img/0802_test.png">
 </p>
 
+## Day 9
 
-<!-- ## Day 9
-
-### Challenge 1
-
-<p align="center">
-    <img src="img/0901.png">
-</p>
-
-### Challenge 2
+### Challenge 1 & 2
 
 <p align="center">
-    <img src="img/0902.png">
+    <img src="img/09.png">
 </p>
 
--->
 <!-- ## Day 10
 
 ### Challenge 1
