@@ -172,6 +172,6 @@ func solveExercise(filePath string) int {
 }
 
 func main() {
-	log.Println("Beginning day12ex01...")
+	log.Println("Beginning day12ex02...")
 	log.Printf("Sum of pot numbers after 50 billion generations: %d", solveExercise(inputFilePath))
 }
