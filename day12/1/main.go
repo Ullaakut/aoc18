@@ -174,20 +174,6 @@ func main() {
 	log.Printf("Sum of pot numbers after 20 generations: %d", solveExercise(inputFilePath))
 }
 
-func printState(state []bool) {
-	line := ""
-
-	for _, s := range state {
-		if s {
-			line += "#"
-		} else {
-			line += "."
-		}
-	}
-
-	log.Println(line)
-}
-
 func printPots(generation int, pots []pot) {
 	line := fmt.Sprintf("%2d: ", generation)
 
