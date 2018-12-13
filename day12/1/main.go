@@ -84,7 +84,7 @@ func arrangePots(pots []pot) []pot {
 	return pots
 }
 
-func computeNextGeneration(pots []pot, rules []rule, debug bool) []pot {
+func computeNextGeneration(pots []pot, rules []rule) []pot {
 	state := []bool{}
 
 	pots = addEmptyPots(pots)
@@ -156,7 +156,7 @@ func solveExercise(filePath string) int {
 	}
 
 	for i := 1; i <= 20; i++ {
-		pots = computeNextGeneration(pots, rules, true)
+		pots = computeNextGeneration(pots, rules)
 		printPots(i, pots)
 	}
 
