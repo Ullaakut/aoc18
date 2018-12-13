@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const inputFilePath = "test.txt"
+const inputFilePath = "input.txt"
 
 type pot struct {
 	index int
@@ -50,15 +50,17 @@ func push(pots []pot, p pot) []pot {
 }
 
 func addEmptyPots(pots []pot) []pot {
-	// Add empty pots to the left of the current state
+	firstIndex := pots[0].index
+
+	// Add empty pots to the left
 	for i := -4; i < 0; i++ {
 		pots = push(pots, pot{
-			index: pots[0].index + i,
+			index: firstIndex + i,
 			plant: false,
 		})
 	}
 
-	// Add empty pots to the right of the current state
+	// Add empty pots to the right
 	for i := 1; i < 5; i++ {
 		pots = append(pots, pot{
 			index: pots[len(pots)-1].index + i,
@@ -69,55 +71,48 @@ func addEmptyPots(pots []pot) []pot {
 	return pots
 }
 
-func removeEmptyPots(pots []pot) []pot {
-	// Remove empty pots to the left
-	for pots[0].plant == false {
-		pots = pots[1:]
-	}
-
-	// Remove empty pots to the right
-	for i := len(pots) - 1; pots[i].plant == false; i-- {
-		pots = pots[:i]
+func arrangePots(pots []pot) []pot {
+	for fIdx := range pots {
+		if pots[fIdx].index == 0 {
+			for idx := range pots {
+				pots[idx].index = idx - fIdx
+			}
+			break
+		}
 	}
 
 	return pots
 }
 
-func computeNextGeneration(pots []pot, rules []rule) []pot {
-	state := []bool{false, false, false, false}
+func computeNextGeneration(pots []pot, rules []rule, debug bool) []pot {
+	state := []bool{}
 
 	pots = addEmptyPots(pots)
 
 	for idx, pot := range pots {
 		state = append(state, pot.plant)
 
+		match := false
 		for _, rule := range rules {
 			if stateMatches(rule.state, state) {
-				pots[idx].plant = rule.effect
+				pots[idx-2].plant = rule.effect
+				match = true
+				break
 			}
 		}
+
+		if match == false && idx > 2 {
+			pots[idx-2].plant = false
+		}
+
 		if len(state) == 5 {
 			state = state[1:]
 		}
 	}
 
-	pots = removeEmptyPots(pots)
+	pots = arrangePots(pots)
 
 	return pots
-}
-
-func printPots(generation int, pots []pot) {
-	line := fmt.Sprintf("%d:\t", generation)
-
-	for _, pot := range pots {
-		if pot.plant {
-			line += "#"
-		} else {
-			line += "."
-		}
-	}
-
-	log.Println(line)
 }
 
 func solveExercise(filePath string) int {
@@ -161,8 +156,14 @@ func solveExercise(filePath string) int {
 	}
 
 	for i := 1; i <= 20; i++ {
-		printPots(i, pots)
-		pots = computeNextGeneration(pots, rules)
+		if i > 2 && i < 5 {
+			pots = computeNextGeneration(pots, rules, true)
+			printPots(i, pots)
+			// printPotsIdx(i, pots)
+		} else {
+			pots = computeNextGeneration(pots, rules, false)
+			printPots(i, pots)
+		}
 	}
 
 	return computeTotalSum(pots)
@@ -170,6 +171,62 @@ func solveExercise(filePath string) int {
 
 func main() {
 	log.Println("Beginning day12ex01...")
-
 	log.Printf("Sum of pot numbers after 20 generations: %d", solveExercise(inputFilePath))
+}
+
+func printState(state []bool) {
+	line := ""
+
+	for _, s := range state {
+		if s {
+			line += "#"
+		} else {
+			line += "."
+		}
+	}
+
+	log.Println(line)
+}
+
+func printPots(generation int, pots []pot) {
+	// line := fmt.Sprintf("%2d: ", generation)
+
+	line := ""
+	// for _, pot := range pots {
+	// 	if pot.plant {
+	// 		line += "#"
+	// 	} else {
+	// 		line += "."
+	// 	}
+	// }
+
+	for i := -6; i < 120; i++ {
+		plant := false
+		for _, pot := range pots {
+			if pot.index == i && pot.plant {
+				plant = true
+				break
+			}
+		}
+
+		if plant {
+			line += "#"
+		} else {
+			line += "."
+		}
+	}
+
+	fmt.Println(line)
+}
+
+func printPotsIdx(generation int, pots []pot) {
+	line := fmt.Sprintf("%2d: ", generation)
+
+	for _, pot := range pots {
+		if pot.plant {
+			line += fmt.Sprintf("%d, ", pot.index)
+		}
+	}
+
+	fmt.Println(line)
 }
