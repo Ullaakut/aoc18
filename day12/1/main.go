@@ -191,15 +191,7 @@ func printState(state []bool) {
 func printPots(generation int, pots []pot) {
 	line := fmt.Sprintf("%2d: ", generation)
 
-	// for _, pot := range pots {
-	// 	if pot.plant {
-	// 		line += "#"
-	// 	} else {
-	// 		line += "."
-	// 	}
-	// }
-
-	for i := -6; i < 50; i++ {
+	for i := -6; i < 120; i++ {
 		plant := false
 		for _, pot := range pots {
 			if pot.index == i && pot.plant {
