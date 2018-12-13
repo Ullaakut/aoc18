@@ -156,14 +156,8 @@ func solveExercise(filePath string) int {
 	}
 
 	for i := 1; i <= 20; i++ {
-		if i > 2 && i < 5 {
-			pots = computeNextGeneration(pots, rules, true)
-			printPots(i, pots)
-			// printPotsIdx(i, pots)
-		} else {
-			pots = computeNextGeneration(pots, rules, false)
-			printPots(i, pots)
-		}
+		pots = computeNextGeneration(pots, rules, true)
+		printPots(i, pots)
 	}
 
 	return computeTotalSum(pots)
