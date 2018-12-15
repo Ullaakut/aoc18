@@ -17,7 +17,7 @@ Day | Completed | Project | Challenge | Language | Tests
 11 | :white_check_mark: | [day11](day11) | [Advent of Code 2018 - Day 11](https://adventofcode.com/2018/day/11) | Go | :white_check_mark:
 12 | :white_check_mark: | [day12](day12) | [Advent of Code 2018 - Day 12](https://adventofcode.com/2018/day/12) | Go | :white_check_mark:
 13 | :white_check_mark: | [day13](day13) | [Advent of Code 2018 - Day 13](https://adventofcode.com/2018/day/13) | Go | :x:
-14 | :soon: | [day14](day14) | [Advent of Code 2018 - Day 14](https://adventofcode.com/2018/day/14) | Go | :soon:
+14 | :white_check_mark: | [day14](day14) | [Advent of Code 2018 - Day 14](https://adventofcode.com/2018/day/14) | Go | :soon:
 15 | :soon: | [day15](day15) | [Advent of Code 2018 - Day 15](https://adventofcode.com/2018/day/15) | Go | :soon:
 16 | :soon: | [day16](day16) | [Advent of Code 2018 - Day 16](https://adventofcode.com/2018/day/16) | Go | :soon:
 17 | :soon: | [day17](day17) | [Advent of Code 2018 - Day 17](https://adventofcode.com/2018/day/17) | Go | :soon:

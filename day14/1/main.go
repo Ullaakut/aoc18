@@ -2,26 +2,22 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
-	"log"
+	"strconv"
 )
 
-const inputFilePath = "input.txt"
-
-func computeXXX(content []byte) int {
-	return 0
-}
+const input = 768071
 
 func main() {
-	log.Println("Beginning day14ex01...")
+	scores := []byte{'3', '7'}
+	firstElf, secondElf := 0, 1
 
-	contents, err := ioutil.ReadFile(inputFilePath)
-	if err != nil {
-		log.Fatal(fmt.Sprint("Unable to read input file:", err))
+	for len(scores) < input+10 {
+		score := []byte(strconv.Itoa(int(scores[firstElf] - '0' + scores[secondElf] - '0')))
+		scores = append(scores, score...)
+
+		firstElf = (firstElf + 1 + int(scores[firstElf]-'0')) % len(scores)
+		secondElf = (secondElf + 1 + int(scores[secondElf]-'0')) % len(scores)
 	}
 
-	XXX := computeXXX(contents)
-
-	log.Println("XXX successfully computed")
-	log.Printf("XXX: %d\n", XXX)
+	fmt.Println(string(scores[input : input+10]))
 }
